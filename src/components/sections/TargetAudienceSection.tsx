@@ -47,7 +47,7 @@ const TargetAudienceSection = () => {
           className="text-center mb-12"
         >
           <span className="text-accent text-[10px] font-bold uppercase tracking-[0.2em]">Público Alvo</span>
-          <h2 className="font-display text-white text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-merriweather text-white text-3xl md:text-4xl font-bold text-foreground mb-4">
             Para quem é a <span className="text-white">mentoria</span>?
           </h2>  
           <div className="w-12 h-0.5 bg-accent mx-auto mt-4"></div>
@@ -80,7 +80,7 @@ const TargetAudienceSection = () => {
 
               {/* Content */}
               <div className="flex-1 pt-1">
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-white mb-2">
+                <h3 className="font-roboto text-xl md:text-2xl font-semibold text-white mb-2">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

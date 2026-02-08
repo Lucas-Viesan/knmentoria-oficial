@@ -5,54 +5,54 @@ const steps = [
   {
     number: 1,
     icon: Search,
-    title: "Diagnóstico de Perfil",
+    title: "Diagnóstico e Posicionamento",
     description: "Mapeamento profundo das suas competências e lacunas para o mercado.",
     activities: [
-      "Análise do currículo atual",
-      "Identificação de pontos fortes",
-      "Mapeamento de gaps técnicos"
+      "Reestruturação do currículo",
+      "Reestruturação do LinkedIn",
+      "Alinhamento de perfil ao cargo"
     ]
   },
   {
     number: 2,
     icon: Sparkles,
-    title: "Estratégia & Branding",
+    title: "Preparação Estratégica",
     description: "LinkedIn e currículo otimizados para atrair os maiores players.",
     activities: [
-      "Otimização do LinkedIn",
-      "Reformulação do currículo",
-      "Posicionamento estratégico"
+      "Mentoria individual (1h30)",
+      "Plano de ação focado em entrevista",
+      "Estudo do cargo, produtos e serviços bancários"
     ]
   },
   {
     number: 3,
     icon: Target,
-    title: "Simulação Intensiva",
+    title: "Prática + Vivência Real",
     description: "Treinamento real de entrevistas e resolução de cases técnicos.",
     activities: [
-      "Simulados de entrevista",
-      "Cases do mercado financeiro",
-      "Feedback detalhado"
+      "Simulações reais de entrevista",
+      "Networking via WhatsApp",
+      "Contato com profissionais do cargo desejado"
     ]
   },
   {
     number: 4,
     icon: HeartHandshake,
-    title: "Mentoria & Acompanhamento",
+    title: "Acompanhamento até a aprovação",
     description: "Suporte na negociação salarial e durante os primeiros 30 dias.",
     activities: [
-      "Negociação salarial",
-      "Onboarding estratégico",
-      "Suporte pós-contratação"
+      "Até 120 dias de acompanhamento",
+      "Flexibilidade de horários",
+      "Suporte de Psicóloga pré-entrevista"
     ]
   }
 ];
 
 const differentials = [
-  "Método validado por +200 aprovações",
-  "Acompanhamento 100% personalizado",
-  "Acesso direto à mentora via WhatsApp",
-  "Material exclusivo do mercado financeiro"
+  "Conversa 1:1 com profissional do cargo desejado",
+  "Preparação emocional para entrevistas decisivas",
+  "Rede ativa de alunos e profissionais do mercado",
+  "Acompanhamento real até a contratação"
 ];
 
 const containerVariants = {
@@ -121,7 +121,7 @@ const MethodologySection = () => {
                 {/* Content */}
                 <div className="flex-1 bg-card rounded-2xl p-5 md:p-6 shadow-card border border-border mb-4">
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">
+                    <h3 className="font-roboto text-lg md:text-xl font-semibold text-foreground">
                       {step.title}
                     </h3>
                   </div>
@@ -129,7 +129,7 @@ const MethodologySection = () => {
                   {/* Activities */}
                   <ul className="space-y-2">
                     {step.activities.map((activity, actIndex) => (
-                      <li key={actIndex} className="flex items-center gap-2 text-sm text-foreground">
+                      <li key={actIndex} className="flex items-baseline gap-2 text-sm text-foreground">
                         <span className="material-symbols-outlined material-filled text-accent text-sm mt-0.5">check_circle</span>
                         {activity}
                       </li>
@@ -149,13 +149,13 @@ const MethodologySection = () => {
             className="lg:col-span-1"
           >
             <div className="bg-navy rounded-3xl p-6 md:p-8 sticky top-24 shadow-elevated">
-              <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-6">
+              <h3 className="font-display text-center text-xl md:text-2xl font-bold text-white mb-6">
                 Diferenciais da <span className="text-accent">mentoria</span>
               </h3>
               
               <ul className="space-y-4">
                 {differentials.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-baseline gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle2 className="w-4 h-4 text-accent" />
                     </div>
@@ -167,7 +167,7 @@ const MethodologySection = () => {
               <div className="mt-8 pt-6 border-t border-white/10">
                 <div className="text-center">
                   <p className="text-white/60 text-sm mb-2">Resultado médio</p>
-                  <p className="text-3xl md:text-4xl font-bold text-accent">2-4 semanas</p>
+                  <p className="text-3xl md:text-4xl font-bold text-accent">15 semanas</p>
                   <p className="text-white/60 text-sm mt-1">até a aprovação</p>
                 </div>
               </div>

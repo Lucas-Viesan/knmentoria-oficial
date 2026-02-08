@@ -97,7 +97,7 @@ const AuthoritySection = () => {
                   <cred.icon className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-foreground text-base md:text-lg leading-snug">
+                  <h4 className="font-roboto font-semibold text-primary-foreground text-base md:text-lg leading-snug">
                     {cred.title}
                   </h4>
                   <p className="text-primary-foreground/70 text-sm mt-1 leading-relaxed">

@@ -14,7 +14,7 @@ const painPoints = [
     title: "Insegurança em Entrevistas",
     description: "O nervosismo trava seu desempenho diante de gestores de grandes bancos.",
     accentColor: "border-l-accent",
-     iconColor: "#facc15",
+     iconColor: "#C89A51",
   },
   {
     icon: MapPin,
@@ -79,7 +79,7 @@ const PainPointsSection = () => {
               <div className="w-10 h-10 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5 md:mb-6 group-hover:bg-primary/20 transition-colors">
                 <item.icon className="w-7 h-7 md:w-8 md:h-8"  style={{ color: item.iconColor }} />
               </div>
-              <h3 className="font-display text-lg md:text-xl font-semibold text-foreground mb-3">
+              <h3 className="font-roboto text-lg md:text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">

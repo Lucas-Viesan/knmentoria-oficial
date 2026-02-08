@@ -16,12 +16,18 @@ export default {
   		fontFamily: {
   			display: [
   				'Playfair Display',
+				'Roboto',
+				'Montserrat',
   				'serif'
+				
   			],
   			body: [
   				'Inter',
   				'sans-serif'
-  			]
+  			],
+			roboto: ['Roboto', 'sans-serif'],
+			merriweather: ['Merriweather', 'sans-serif'],
+			lato: ['Lato', 'sans-serif'],
   		},
   		colors: {
   			border: 'hsl(var(--border))',

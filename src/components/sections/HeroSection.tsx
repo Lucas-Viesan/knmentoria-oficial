@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Star } from "lucide-react";
+import { useState, useEffect } from "react";
 import heroBackground from "@/assets/images/capa.jpg";
+import perfil2 from "@assets/images/perfil2.jpg";
+import perfil3 from "@assets/images/perfil3.jpg";
+import perfil4 from "@assets/images/perfil4.jpg";
+import perfil5 from "@assets/images/perfil5.jpg";
+
 const WHATSAPP_NUMBER = "5513996105219";
 const WHATSAPP_MESSAGE = `Olá Karla! Tudo bem?
 
@@ -18,10 +24,42 @@ const HeroSection = () => {
     document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const results = [
+    {
+      imagem: perfil2
+    },
+     {
+      imagem: perfil3
+    },
+       {
+      imagem: perfil4
+    },
+       {
+      imagem: perfil5
+    }
+  ]
+  
+const [count, setCount] = useState(0);
+
+useEffect(() => {
+  let current = 0;
+  const target = 200;
+  const increment = 2; // quanto aumenta a cada tick
+  const interval = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(interval);
+    }
+    setCount(current);
+  }, 25); // intervalo em ms
+
+  return () => clearInterval(interval);
+}, []);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
       {/* Background Image with focal point control */}
-      <div 
+      <div    
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBackground})`,
@@ -42,7 +80,7 @@ const HeroSection = () => {
           >
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Te ajudo a transformar sua trajetória no{" "}
-              <span className="text-gold">Mercado Financeiro</span>
+              <span className="text-gold">mercado financeiro</span>
             </h1>
           </motion.div>
 
@@ -57,8 +95,9 @@ const HeroSection = () => {
               onClick={handleWhatsApp}
               className="w-full sm:w-auto bg-gold hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all hover:scale-105 shadow-elevated flex items-center justify-center gap-2"
             >
-              <TrendingUp className="w-5 h-5" />
+          
               Agendar mentoria
+              <TrendingUp className="w-5 h-5" />
             </button>
             <button
               onClick={scrollToAbout}
@@ -81,7 +120,7 @@ const HeroSection = () => {
                 <div className="text-center sm:text-left">
                   <div className="flex items-center justify-center sm:justify-start gap-1 mb-1">
                   </div>
-                  <p className="text-white text-xl sm:text-2xl font-bold">+200 sonhos</p>
+                  <p className="text-accent text-3xl sm:text-2xl font-bold">+{count} sonhos</p>
                   <p className="text-white/70 text-sm">transformados em crachás</p>
                 </div>
 
@@ -89,16 +128,23 @@ const HeroSection = () => {
 
                 {/* Avatars */}
                 <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary border-2 border-white flex items-center justify-center"
-                    >
-                      <span className="text-primary-foreground text-xs font-medium">
-                        {i === 4 ? "+196" : ""}
-                      </span>
-                    </div>
-                  ))}
+                    {results.map((item, index) => (
+                      <div
+                        key={index}
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary border-2 border-accent overflow-hidden flex items-center justify-center"
+                      >
+                        <img
+                          src={item.imagem}
+                          alt={`Avatar ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                <div className="w-10 h-10 rounded-full bg-accent border-2 border-accent flex items-center justify-center">
+                  <span className="text-primary-foreground text-xs font-medium">
+                    +196
+                  </span>
+                </div>
                 </div>
 
                 <div className="hidden sm:block w-px h-12 bg-white/20" />

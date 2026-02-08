@@ -1,38 +1,50 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Star, BadgeCheck, ChevronLeft, ChevronRight } from "lucide-react";
+import depoimentos1 from "@assets/images/depoimento1.jpg";
+import depoimentos2 from "@assets/images/depoimento2.jpg";
+import depoimentos3 from "@assets/images/depoimento3.jpg";
+import depoimentos4 from "@assets/images/depoimento4.jpg";
+import depoimentos5 from "@assets/images/depoimento5.jpg";
+import depoimentos6 from "@assets/images/depoimento6.jpg";
 
 const testimonials = [
   {
-    quote: "A mentoria da Karla foi o divisor de águas. Eu não conseguia passar da primeira fase, e com o direcionamento dela, conquistei minha vaga dos sonhos em menos de 2 meses.",
-    name: "Lucas Silveira",
-    role: "Analista no BTG Pactual",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+    quote: "A palavra PRIVILÉGIO define em ter a Karla como mentora! Tive o prazer de realizar mentoria para ingressar no mercado financeiro, é uma ótima profissional, dedicada e comprometida. Sempre disposta compartilhar seus conhecimentos e direcionar para chegar no objetivo de forma personalizada. Além disso, seu apoio e incentivo durante toda a mentoria é motivadores para o desenvolvimento profissional. Karla, é inspiradora em seu trabalho e todos devem ter a sorte de ter como mentora. ",
+    name: "Kelly Araujo",
+    role: "Agente de Negócios",
+    image: depoimentos5
+  },
+    {
+    quote: "Karla Nachtajler, CEA, AAA, Mentora de Carreiras faz um trabalho incrível ajudando muitas pessoas e eu sou um exemplo de alguém que ela ajudou e foi fundamental para eu arrumar a vaga no AAA. Você faz a diferença ajudando todos em realizar seus sonhos, continue com essa dedicação, profissionalismo e carinho.",
+    name: "Raphael Moura",
+    role: "Assessor de Investimentos",
+    image: depoimentos6
   },
   {
-    quote: "O suporte na preparação para os cases técnicos foi impecável. Senti total confiança durante o processo seletivo e hoje estou onde sempre quis estar.",
-    name: "Beatriz Mendes",
-    role: "Private Banking no Itaú",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    quote: "Só tenho a agradecer por toda ajuda, você foi essencial nesse processo da minha vida, quem tiver a oportunidade de fazer a mentoria com você não vai se arrepender, pelo contrário, além de conseguir realizar o sonho de entrar no mercado financeiro, ganhará uma amiga. Porque você é maravilhosa e tem um coração gigante! Muito obrigada e continue transformando vidas, você nasceu pra isso!",
+    name: "Ana Paula Régio",
+    role: "Especialista Santander",
+    image: depoimentos1
   },
   {
-    quote: "A Karla tem uma visão que ninguém mais tem sobre o que os bancos buscam. O método dela é prático, direto ao ponto e focado em resultados reais.",
-    name: "Ricardo Fontes",
-    role: "Investment Banking XP",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    quote: "Foi uma experiência muito marcante para mim; a ajuda da Karla Nachtajler, CEA, AAA, Mentora de Carreiras surpreendeu e muito minhas expectativas! E tenho certeza que foi fundamental para a minha aprovação no processo seletivo. A minha evolução se deve muito a você. Gente vale muito a pena, façam!!!",
+    name: "Aline Fontoura Campos",
+    role: "Assessora de Investimentos",
+    image: depoimentos2
   },
   {
-    quote: "Estava perdida sobre qual caminho seguir. A mentoria me ajudou a encontrar minha área ideal e em 3 semanas já tinha uma proposta.",
-    name: "Juliana Costa",
-    role: "Analista no Bradesco",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop"
+    quote: "Fazer a mentoria com a Karla Nachtajler, CEA, AAA, Mentora de Carreiras, foi uma das melhores decisões que tomei! Além de ser super experiente e profissional, ela se torna uma amiga, acompanhando cada passo bem de perto. Se você quer alavancar suas vendas e busca uma mentoria de qualidade, recomendo de olhos fechados. Ela é incrível!",
+    name: "Jeferson Alves Estevão",
+    role: "Gerente de Relacionamento",
+    image: depoimentos4
   },
   {
-    quote: "O diferencial é o acompanhamento personalizado. Não é só uma mentoria genérica, a Karla realmente entende seu perfil e direciona estrategicamente.",
-    name: "André Pereira",
-    role: "Gerente no Santander",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop"
-  }
+    quote: "Karla foi minha gestora e mentora, me mostrou o caminho e hoje me sinto muito mais preparada pra assumir os desafios que tanto almejei. Como líder, sempre colocou a mão a na massa e mostrou que tudo era possível para um coração cheio de vontade. Karla tem muita bagagem e consegue acrescentar nos caminhos profissionais de qualquer um que procurar os seus serviços. Recomendo de olhos fechados!",
+    name: "Laura Hidalgo",
+    role: "Gerente de Atendimento",
+    image: depoimentos3
+  },
 ];
 
 const TestimonialsSection = () => {

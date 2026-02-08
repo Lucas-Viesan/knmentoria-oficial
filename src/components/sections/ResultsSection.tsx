@@ -1,98 +1,49 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BadgeCheck, Trophy } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 
 import caseSuccess from "@assets/images/case.jpg";
 import caseSuccess2 from "@assets/images/case2.jpg";
 import caseSuccess3 from "@assets/images/case3.jpg";
 import caseSuccess4 from "@assets/images/case4.jpg";
 import caseSuccess5 from "@assets/images/case5.jpg";
+import caseSuccess6 from "@assets/images/case6.jpg";
+import caseSuccess7 from "@assets/images/case7.jpg";
+import caseSuccess8 from "@assets/images/case8.jpg";
+import caseSuccess9 from "@assets/images/case9.jpg";
+import caseSuccess10 from "@assets/images/case10.jpg";
+import caseSuccess11 from "@assets/images/case11.jpg";
+import caseSuccess12 from "@assets/images/case12.jpg";
+import caseSuccess13 from "@assets/images/case13.jpg";
+import caseSuccess14 from "@assets/images/case14.jpg";
+import caseSuccess15 from "@assets/images/case15.jpg";
+import caseSuccess16 from "@assets/images/case21.jpg";
+import caseSuccess17 from "@assets/images/case17.jpg";
+import caseSuccess18 from "@assets/images/case18.jpg";
+import caseSuccess19 from "@assets/images/case19.jpg";
+import caseSuccess20 from "@assets/images/case20.jpg";
 
 const results = [
-  {
-    image: caseSuccess2,
-    name: "Lucas S.",
-    role: "BTG Pactual",
-  },
-  {
-    image: caseSuccess,
-    name: "Beatriz M.",
-    role: "Itaú Private",
-  },
-  {
-    image: caseSuccess5,
-    name: "Ricardo F.",
-    role: "XP Inc.",
-  },
-  {
-    image: caseSuccess3,
-    name: "Juliana C.",
-    role: "Bradesco",
-  },
-  {
-    image: caseSuccess4,
-    name: "André P.",
-    role: "Santander",
-  },
-  { image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop", 
-    name: "Lucas S.", 
-    role: "BTG Pactual" 
-  },
-  { image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop", 
-    name: "Beatriz M.", 
-    role: "Itaú Private" 
-  },
-  { image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop", 
-    name: "Ricardo F.", 
-    role: "XP Inc." 
-  },
-  { image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop", 
-    name: "Juliana C.", 
-    role: "Bradesco" 
-  },
-  { image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop", 
-    name: "André P.", 
-    role: "Santander" 
-  },
-  { image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop", 
-    name: "Camila R.", 
-    role: "Nubank" 
-  },
-  { image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop", 
-    name: "Felipe T.", 
-    role: "Modal" 
-  },
-  { image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop", 
-    name: "Marina L.", 
-    role: "Credit Suisse" 
-  },
-  { image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop", 
-    name: "Diego N.", 
-    role: "Safra" 
-  },
-  { image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop", 
-    name: "Isabela K.", 
-    role: "JP Morgan" 
-  },
-  { image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop", 
-    name: "Thiago M.", 
-    role: "Goldman Sachs" 
-  },
-  { image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop", 
-    name: "Fernanda A.", 
-    role: "Votorantim" 
-  },
-  { image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&h=400&fit=crop", 
-    name: "Gustavo H.", 
-    role: "Banco do Brasil" 
-  },
-  { image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop", 
-    name: "Patrícia V.", 
-    role: "Citi" 
-  },
-  { image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop", 
-    name: "Marcos D.", 
-    role: "UBS" },
+  { image: caseSuccess2, name: "Vanessa G.", role: "Itaú" },
+  { image: caseSuccess3, name: "Jéssica L.", role: "Itaú" },
+  { image: caseSuccess5, name: "Ismar G.", role: "Itaú" },
+  { image: caseSuccess16, name: "Jucelir R.", role: "Itaú" },
+  { image: caseSuccess4, name: "Geovanna S.", role: "Mercantil" },
+  { image: caseSuccess6, name: "Raphael M.", role: "Santander" },
+  { image: caseSuccess7, name: "Alex D.", role: "Itaú" },
+  { image: caseSuccess9, name: "Arnaldo C.", role: "Itaú" },
+  { image: caseSuccess8, name: "Kelly A.", role: "Itaú" },
+  { image: caseSuccess10, name: "Lethicia P.", role: "Porto Seguro" },
+  { image: caseSuccess12, name: "Aline V.", role: "Itaú" },
+  { image: caseSuccess15, name: "José V.", role: "Santander" },
+  { image: caseSuccess11, name: "Adna R.", role: "Bradesco" },
+  { image: caseSuccess13, name: "Kalel D.", role: "Santander" },
+  { image: caseSuccess14, name: "Francisco F.", role: "Itaú" },
+  { image: caseSuccess17, name: "Tais S.", role: "Itaú" },
+  { image: caseSuccess, name: "Felipe F.", role: "Sicredi" },
+  { image: caseSuccess18, name: "Ingrid M.", role: "Itaú" },
+  { image: caseSuccess19, name: "Fernanda F.", role: "Itaú" },
+  { image: caseSuccess20, name: "Jefferson A.", role: "Itaú" },
 ];
 
 const containerVariants = {
@@ -112,25 +63,27 @@ const itemVariants = {
   },
 };
 
+const CARDS_COUNT = 5;
+
 const ResultsSection = () => {
   const [baseIndex, setBaseIndex] = useState(0);
-  const CARDS_COUNT = 5;
+  const [isPaused, setIsPaused] = useState(false);
 
-
-  // controla o tempo da troca
+  // autoplay controlado por pause
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setBaseIndex((prev) => prev + CARDS_COUNT);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
-  // resolve qual imagem cada card deve usar
- const getItemForCard = (cardIndex: number) => {
-  return results[(baseIndex + cardIndex) % results.length];
-};
-
+  // resolve qual item cada card mostra
+  const getItemForCard = (cardIndex: number) => {
+    return results[(baseIndex + cardIndex) % results.length];
+  };
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -164,13 +117,16 @@ const ResultsSection = () => {
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto"
         >
           {Array.from({ length: CARDS_COUNT }).map((_, index) => {
-          const item = getItemForCard(index);
+            const item = getItemForCard(index);
 
             return (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="relative group"
+                className="relative group cursor-pointer"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                onClick={() => setIsPaused(true)}
               >
                 <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative">
                   <AnimatePresence mode="wait">
@@ -212,11 +168,10 @@ const ResultsSection = () => {
             className="aspect-square rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-4 shadow-elevated"
           >
             <div className="text-center">
-              <Trophy className="w-8 h-8 text-accent mx-auto mb-2" />
-              <p className="text-4xl md:text-5xl font-bold text-primary-foreground">
+              <p className="text-3xl md:text-5xl font-bold text-accent">
                 +200
               </p>
-              <p className="text-primary-foreground/80 text-xs md:text-sm mt-1">
+              <p className="text-primary-foreground/80 text-lg md:text-sm mt-1">
                 carreiras
                 <br />
                 transformadas
