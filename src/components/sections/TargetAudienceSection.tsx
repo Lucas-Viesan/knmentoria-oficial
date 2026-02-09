@@ -3,18 +3,19 @@ import { CheckCircle2 } from "lucide-react";
 
 const audiences = [
   {
-    title: "Estagiários",
-    description: "Que desejam conquistar a primeira oportunidade em grandes instituições financeiras."
+    title: "Pessoas que desejam entrar no banco",
+    description: "Com certificação ANBIMA e o sonho de conquistar a primeira oportunidade no mercado financeiro."
   },
   {
-    title: "Profissionais em Transição",
-    description: "Que buscam migrar de outras áreas para o mercado financeiro."
+    title: "Pesssoas em transição de carreira",
+    description: "Profissionais que decidiram migrar para o setor bancário e buscam direcionamento claro e estratégico."
   },
   {
-    title: "Bancários",
-    description: "Que querem crescer na carreira e assumir posições estratégicas."
+    title: "Pessoas que já atuam no mercado financeiro",
+    description: "Bancários que desejam crescer, se posicionar melhor e alcançar novos patamares na carreira."
   }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,7 +48,7 @@ const TargetAudienceSection = () => {
           className="text-center mb-12"
         >
           <span className="text-accent text-[10px] font-bold uppercase tracking-[0.2em]">Público Alvo</span>
-          <h2 className="font-merriweather text-white text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-white text-3xl md:text-4xl font-bold text-foreground mb-4">
             Para quem é a <span className="text-white">mentoria</span>?
           </h2>  
           <div className="w-12 h-0.5 bg-accent mx-auto mt-4"></div>

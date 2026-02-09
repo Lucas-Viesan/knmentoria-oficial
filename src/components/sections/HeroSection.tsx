@@ -114,7 +114,7 @@ useEffect(() => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="mt-6 h-[120px] md:mt-16 flex flex-col items-center"
           >
-            <div className="bg-[#0f172a]/60 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-white/20 w-full max-w-lg">
+            <div className="bg-[#0f172a]/60 backdrop-blur-md rounded-3xl p-4 sm:p-6  w-full max-w-lg">
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                 {/* Stats */}
                 <div className="text-center sm:text-left">
@@ -141,7 +141,7 @@ useEffect(() => {
                       </div>
                     ))}
                 <div className="w-10 h-10 rounded-full bg-accent border-2 border-accent flex items-center justify-center">
-                  <span className="text-primary-foreground text-xs font-medium">
+                  <span className="text-primary-foreground text-sm font-bold">
                     +196
                   </span>
                 </div>

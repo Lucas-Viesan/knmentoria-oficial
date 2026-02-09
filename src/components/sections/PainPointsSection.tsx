@@ -4,24 +4,27 @@ import { UserX, Brain, MapPin } from "lucide-react";
 const painPoints = [
   {
     icon: UserX,
-    title: "Invisibilidade",
-    description: "Sente que seu currículo nunca é selecionado, mesmo tendo as competências certas.",
-    accentColor: "border-l-destructive",
-     iconColor: "#f87171" 
+    title: "Você se sente invisível nos processos seletivos",
+    description:
+      "Mesmo com certificação ANBIMA e dedicação, seu currículo não avança e você não entende o que está faltando.",
+    accent: "from-indigo-500/20 to-transparent",
+    iconBg: "bg-primary",
   },
   {
     icon: Brain,
-    title: "Insegurança em Entrevistas",
-    description: "O nervosismo trava seu desempenho diante de gestores de grandes bancos.",
-    accentColor: "border-l-accent",
-     iconColor: "#C89A51",
+    title: "A insegurança aparece na hora decisiva",
+    description:
+      "Entrevistas, dinâmicas e conversas com gestores geram nervosismo e travam o seu desempenho.",
+    accent: "from-indigo-500/20 to-transparent",
+    iconBg: "bg-primary",
   },
   {
     icon: MapPin,
-    title: "Falta de Direcionamento",
-    description: "Não sabe qual área do mercado financeiro combina com seu perfil e ambições.",
-    accentColor: "border-l-[#4f46e5]",
-     iconColor: "#4f46e5" 
+    title: "Você não tem clareza sobre o próximo passo",
+    description:
+      "Dúvidas sobre qual área seguir, como se posicionar e o que realmente leva à entrada ou crescimento no banco.",
+    accent: "from-indigo-500/20 to-transparent",
+    iconBg: "bg-primary",
   }
 ];
 
@@ -29,65 +32,99 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.15
-    }
+    transition: { staggerChildren: 0.2 }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }
+    transition: { duration: 0.6 }
   }
 };
 
 const PainPointsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-14 md:mb-20"
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <span className="text-accent text-[10px] font-bold uppercase tracking-[0.2em]">
+            Evolução travada
+          </span>
+
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
             Você se sente assim?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Obstáculos que impedem seu crescimento no mercado.
+
+          <div className="w-12 h-0.5 bg-accent mx-auto mt-4"></div>
+          <p className="mt-2 text-muted-foreground text-lg max-w-2xl mx-auto">
+          Talento sem direção e estratégia não avança no mercado financeiro.
           </p>
+
+
         </motion.div>
 
+        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
         >
           {painPoints.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border border-l-4 ${item.accentColor} hover:shadow-elevated transition-all duration-300 group`}
+              className="
+                relative bg-card rounded-2xl p-6 md:p-8
+                border border-border
+                shadow-card hover:shadow-elevated
+                transition-all duration-300
+                overflow-hidden
+              "
             >
-              <div className="w-10 h-10 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5 md:mb-6 group-hover:bg-primary/20 transition-colors">
-                <item.icon className="w-7 h-7 md:w-8 md:h-8"  style={{ color: item.iconColor }} />
+              {/* Accent gradient */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${item.accent} pointer-events-none`}
+              />
+
+              {/* Title row */}
+              <div className="relative z-10 flex items-start gap-4 mb-4">
+                <div
+                  className={`
+                    w-10 h-10 md:w-12 md:h-12
+                    rounded-xl ${item.iconBg}
+                    flex items-center justify-center
+                    flex-shrink-0 shadow-md
+                  `}
+                >
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                </div>
+
+                <h3 className="font-roboto text-lg md:text-xl font-semibold text-foreground leading-snug">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="font-roboto text-lg md:text-xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+
+              {/* Description */}
+              <p className="relative z-10 text-muted-foreground leading-relaxed text-sm md:text-base">
                 {item.description}
               </p>
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );

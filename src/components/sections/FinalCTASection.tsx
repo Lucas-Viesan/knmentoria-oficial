@@ -9,8 +9,8 @@ Gostaria de conversar sobre a mentoria em carreira bancária e entender os próx
 Podemos conversar?`;
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" }
+  { icon: Instagram, href: "https://www.instagram.com/kn.mentoria/", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/karlanachtajler/", label: "LinkedIn" }
 ];
 
 const FinalCTASection = () => {

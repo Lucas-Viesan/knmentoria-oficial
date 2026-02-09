@@ -5,23 +5,23 @@ import karlaPhoto from "@/assets/images/perfil.jpg";
 const credentials = [
   {
     icon: Briefcase,
-    title: "13 anos de mercado financeiro",
-    description: "Experiência sólida em grandes players do setor bancário.",
+    title: "13 anos no mercado financeiro",
+    description:"Vivência prática no ambiente bancário, com foco em metas, desafios reais e crescimento profissional."
   },
   {
     icon: Shield,
-    title: "Experiência como gestora",
-    description: "Liderança estratégica em instituições de renome.",
+    title: "Gestão de pessoas em grande instituição bancária",
+    description: "Experiência liderando e preparando talentos para assumir novos desafios no mercado financeiro.",
   },
   {
     icon: GraduationCap,
-    title: "Formação Acadêmica",
-    description: "Especializações focadas em Finanças e Gestão de Pessoas.",
+    title: "Formação acadêmica aplicada a realidade do banco",
+    description: "Especializações focadas em Executive, Positive Coaching e MBA em Corporate Banking",
   },
   {
     icon: Heart,
-    title: "Atuação como mentora",
-    description: "Transformando carreiras através de mentoria personalizada.",
+    title: "Mentoria focada em alta performance",
+    description: "Há mais de 3 anos ajudando profissionais a desenvolverem seu potencial com método, clareza e direcionamento."
   },
 ];
 
