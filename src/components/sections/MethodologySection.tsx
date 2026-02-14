@@ -167,7 +167,7 @@ const MethodologySection = () => {
               <div className="mt-8 pt-6 border-t border-white/10">
                 <div className="text-center">
                   <p className="text-white/60 text-sm mb-2">Resultado médio</p>
-                  <p className="text-3xl md:text-4xl font-bold text-accent">15 semanas</p>
+                  <p className="text-3xl md:text-4xl font-bold text-accent">3 meses</p>
                   <p className="text-white/60 text-sm mt-1">até a aprovação</p>
                 </div>
               </div>

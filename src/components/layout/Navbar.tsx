@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5513996105219";
+const WHATSAPP_NUMBER = "5511975321800";
 const WHATSAPP_MESSAGE = `Olá Karla! Tudo bem?
 
 Vim através do seu site e me identifiquei com o seu trabalho.

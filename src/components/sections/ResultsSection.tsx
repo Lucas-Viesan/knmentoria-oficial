@@ -17,19 +17,19 @@ import caseSuccess12 from "@assets/images/case12.jpg";
 import caseSuccess13 from "@assets/images/case13.jpg";
 import caseSuccess14 from "@assets/images/case14.jpg";
 import caseSuccess15 from "@assets/images/case15.jpg";
+import caseSuccess16 from "@assets/images/case16.jpg";
 import caseSuccess17 from "@assets/images/case17.jpg";
 import caseSuccess18 from "@assets/images/case18.jpg";
 import caseSuccess19 from "@assets/images/case19.jpg";
 import caseSuccess20 from "@assets/images/case20.jpg";
-import caseSuccess21 from "@assets/images/case21.jpg";
 
 const results = [
-  { image: caseSuccess2, name: "Vanessa G.", role: "Itaú" },
+  { image: caseSuccess6, name: "Raphael M.", role: "Santander" },
   { image: caseSuccess3, name: "Jéssica L.", role: "Itaú" },
   { image: caseSuccess5, name: "Ismar G.", role: "Itaú" },
-  { image: caseSuccess21, name: "Aline F.", role: "Santander" },
+  { image: caseSuccess16, name: "Jucelir R.", role: "Itaú" },
   { image: caseSuccess4, name: "Geovanna S.", role: "Mercantil" },
-  { image: caseSuccess6, name: "Raphael M.", role: "Santander" },
+  { image: caseSuccess2, name: "Vanessa G.", role: "Itaú" },
   { image: caseSuccess7, name: "Alex D.", role: "Itaú" },
   { image: caseSuccess9, name: "Arnaldo C.", role: "Itaú" },
   { image: caseSuccess8, name: "Kelly A.", role: "Itaú" },
@@ -40,9 +40,9 @@ const results = [
   { image: caseSuccess13, name: "Kalel D.", role: "Santander" },
   { image: caseSuccess14, name: "Francisco F.", role: "Itaú" },
   { image: caseSuccess17, name: "Tais S.", role: "Itaú" },
-  { image: caseSuccess, name: "Felipe F.", role: "Sicredi" },
-  { image: caseSuccess18, name: "Ingrid M.", role: "Itaú" },
   { image: caseSuccess19, name: "Fernanda F.", role: "Itaú" },
+  { image: caseSuccess18, name: "Ingrid M.", role: "Itaú" },
+  { image: caseSuccess, name: "Felipe F.", role: "Sicredi" },
   { image: caseSuccess20, name: "Jefferson A.", role: "Itaú" },
 ];
 

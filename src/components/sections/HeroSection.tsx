@@ -7,7 +7,7 @@ import perfil3 from "@assets/images/perfil3.jpg";
 import perfil4 from "@assets/images/perfil4.jpg";
 import perfil5 from "@assets/images/perfil5.jpg";
 
-const WHATSAPP_NUMBER = "5513996105219";
+const WHATSAPP_NUMBER = "5511975321800";
 
 const WHATSAPP_MESSAGE = `Olá Karla! Tudo bem?
 
