@@ -7,7 +7,7 @@ const audiences = [
     description: "Com certificação ANBIMA e o sonho de conquistar a primeira oportunidade no mercado financeiro."
   },
   {
-    title: "Pesssoas em transição de carreira",
+    title: "Pessoas em transição de carreira",
     description: "Profissionais que decidiram migrar para o setor bancário e buscam direcionamento claro e estratégico."
   },
   {
